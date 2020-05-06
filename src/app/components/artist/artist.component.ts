@@ -29,7 +29,6 @@ export class ArtistComponent implements OnInit {
     this.loading = true;
     this.spotyService.getArtist(id)
       .subscribe(artist => {
-        console.log(artist);
         this.artist = artist;
         this.loading = false;
       
@@ -40,7 +39,6 @@ export class ArtistComponent implements OnInit {
     this.spotyService.getTopTracks(id)
       .subscribe(topTracks => {
         this.topTracks = topTracks;
-        console.log(topTracks);
       });
   }
 

@@ -1,0 +1,15 @@
+<app-loading *ngIf="loading"></app-loading>
+<div *ngIf="error" class="alert alert-danger animated fadeIn">
+    <h3>Error</h3>
+    <p>{{errorMessage}}</p>
+</div>
+<div class="m-5">
+<div class="row animated fadeIn">
+    <div class="col" style="text-align: center;" *ngFor="let item of categories" >
+      <img [src]="item.icons[0].url" class="rounded-circle" alt="...">
+      <h5 class="m-3"> {{item.name}}</h5>
+      <div >
+        <h5 class="card-title">{{item.name}}</h5>
+      </div>
+    </div>
+</div>
